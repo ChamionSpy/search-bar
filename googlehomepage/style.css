@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('cyberpunk-7654046_1920.jpg'); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Noto Sans HK', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.main {
+  text-align: center;
+  /* Adjust vertical positioning of the main content */
+  margin-top: -200px; /* Adjust this value to move the content up or down */
+}
+
+.google {
+  width: 100px;
+  margin-bottom: 10px;
+  /* Move the image higher or lower if needed */
+  margin-top: 0; /* Set to a positive value to move it down or a negative value to move it up */
+}
+
+.searchb {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 5px; /* Adjust padding as needed */
+  border-radius: 50px;
+  /* Adjust vertical positioning of the search bar */
+  margin-top: 10px; /* Adjust this value to move the search bar up or down */
+}
+
+input[type="text"] {
+  width: 250px;
+  height: 45px;
+  border-radius: 50px;
+  border: 1px solid #d5d4d4;
+  outline: none;
+  padding: 0 0 0 45px;
+  font-size: 16px;
+  box-shadow: 0 2px 10px -2px #000;
+  font-family: 'Noto Sans HK', sans-serif;
+}
+
+.searchicon {
+  position: absolute;
+  left: 15px;
+  color: #777;
+  font-size: 21px;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+input[type="text"]:focus + .searchicon {
+  color: black;
+}
+
+@media (max-width: 600px) {
+  .searchb {
+    width: 100%;
+    margin: 0 10px;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 50px);
+  }
+  
+  .google {
+    width: 100px;
+  }
+}
